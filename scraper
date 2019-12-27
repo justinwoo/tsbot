@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+if (Math.random() < 0.5) {
+  console.log("Hello");
+  console.log("Hi");
+  console.log("No");
+  console.log("Yes");
+} else {
+  console.log("nothing new to download");
+}
