@@ -70,13 +70,13 @@ impl Actor for TelegramBot {
                     }
                 }
                 Ok(res) => {
-                    scraper.do_send(Msg::Error(format!(
+                    eprintln!(
                         "Telegram API problem, res.ok was not true: {:?}",
                         res.description
-                    )));
+                    );
                 }
                 Err(err) => {
-                    scraper.do_send(Msg::Error(err));
+                    eprintln!("{}", err);
                 }
             }
         });

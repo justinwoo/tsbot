@@ -8,7 +8,6 @@ pub type MyResult<A> = Result<A, MyError>;
 pub enum Msg {
     Timer,
     User,
-    Error(String),
 }
 
 #[derive(Debug)]
