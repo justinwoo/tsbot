@@ -32,7 +32,7 @@ impl Handler<Msg> for Scraper {
 
         println!("Handling message: {:?}", msg);
 
-        let scraper = std::process::Command::new("./scraper").output();
+        let scraper = std::process::Command::new("scraper").output();
 
         match scraper {
             Err(e) => send_text(format!("Error running scraper: {}", e)),
