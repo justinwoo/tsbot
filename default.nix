@@ -5,7 +5,7 @@ let
 
 in
 pkgs.stdenv.mkDerivation rec {
-  name = "nixpkgs-fmt";
+  name = "tsbot";
 
   src = pkgs.fetchurl {
     url = "https://github.com/justinwoo/tsbot/releases/download/2020-01-09/tsbot";
