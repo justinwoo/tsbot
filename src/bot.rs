@@ -95,6 +95,10 @@ impl Handler<RunResult> for TelegramBot {
             utf8_percent_encode(&res.text, SIMPLE_ENCODE_SET)
         );
 
+        if !res.from_user && res.text.contains("nothing new to download") {
+            return;
+        }
+
         let res: MyResult<()> = try {
             let url = telegram::get_url(&self.token, &method_params)?;
             let _ = reqwest::get(url).or_else(|e| Err(format!("Failed to send message: {}", e)))?;
