@@ -8,8 +8,8 @@ pkgs.stdenv.mkDerivation rec {
   name = "tsbot";
 
   src = pkgs.fetchurl {
-    url = "https://github.com/justinwoo/tsbot/releases/download/2020-01-09/tsbot";
-    sha256 = "0d517ifw9c0g2pp68g8v383v7lmhn47bspas13s3ja1ncqgnqnqc";
+    url = "https://github.com/justinwoo/tsbot/releases/download/2020-01-31/tsbot";
+    sha256 = "1k1q1a2jvcvml3gzjbywq2y2381xhhxwwva0c3mkbffxfws4vv7a";
   };
 
   buildInputs = [ pkgs.makeWrapper ];
